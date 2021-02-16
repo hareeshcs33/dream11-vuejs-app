@@ -1,18 +1,24 @@
 <template>
   <div id="app">
-    <header-section></header-section>
-    <router-view/>
+    <div class="login-wrapper" v-if="isLogined"></div>
+    <header-section v-else></header-section>
+    <router-view />
   </div>
 </template>
 
 <script>
-import HeaderSection from './components/header-section';
+import HeaderSection from "./components/header-section";
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      isLogined: false
+    };
+  },
   components: {
     HeaderSection
   }
-}
+};
 </script>
 
 <style>
@@ -25,7 +31,8 @@ export default {
 body {
   margin: 0;
 }
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {

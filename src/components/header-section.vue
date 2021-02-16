@@ -1,7 +1,10 @@
 <template>
   <div class="navbar">
     <ul>
-      <li><router-link to="/">Orders</router-link></li>
+      <li><router-link to="/login">Login</router-link></li>
+      <li><router-link to="/signUp">SignUp</router-link></li>
+      <li><router-link to="/order-list">Orders</router-link></li>
+      <li><router-link to="">userName</router-link></li>
     </ul>
   </div>
 </template>
